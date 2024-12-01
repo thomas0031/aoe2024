@@ -6,8 +6,9 @@ with open('input', 'r') as f:
     lines = f.readlines()
     l1: list[int] = []
     l2: list[int] = []
-    for i in range(len(lines)):
-        split = lines[i].split()
+
+    for line in lines:
+        split = line.split()
         bisect.insort(l1, int(split[0]))
         bisect.insort(l2, int(split[1]))
     
